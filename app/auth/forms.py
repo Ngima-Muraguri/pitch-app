@@ -48,4 +48,9 @@ class Update(FlaskForm):
             if user:  
                 raise ValidationError('That email is taken. Please choose a different one')
 
+#form intialization+
+    username = StringField('Username', validators=[DataRequired()],render_kw={"placeholder": "Username"})
+    email = StringField('Email', validators=[DataRequired(), Email()],render_kw={"placeholder": "example@example.com"})
+    picture = FileField('Update Profile Picture', validators=[FileAllowed(['jpg','png','jpeg'])])
+    submit = SubmitField('Update')
     
