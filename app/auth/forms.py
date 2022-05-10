@@ -18,3 +18,10 @@ class Register(FlaskForm):
         if user:  
             raise ValidationError('That email is taken. Please choose a different one')
         
+    #form intialization
+    
+    username = StringField('Username', validators=[DataRequired()],render_kw={"placeholder": "Username"})
+    email = StringField('Email', validators=[DataRequired(), Email()],render_kw={"placeholder": "example@example.com"})
+    password = PasswordField('Password', validators=[DataRequired()],render_kw={"placeholder": "**********"})
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')],render_kw={"placeholder":"Confirm Password"})
+    submit = SubmitField('Sign up')
