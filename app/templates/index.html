@@ -23,4 +23,30 @@
                     <button id="close">&times;</button>
                 </div>
             </div>
-            
+            <hr>
+            <div class=pop-form-div>
+                {{ form.title.label }}
+                <div>
+                    {{ form.title }}
+                </div>
+                {{ form.description.label }}
+                <div>
+                    {{ form.description }}
+                </div>
+            </div>
+            <div class="pop-form-create" id="we">
+                {{ form.submit }}
+            </div>
+        </form>
+    </article>
+
+</section>
+<section class="main">
+
+    <section class="main-company">
+        <article class="main-company-title">
+            <h1>Pitches</h1>
+            <p>Publish your pitches</p>
+        </article>
+        {% if current_user.is_authenticated %}
+        
