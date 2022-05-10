@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block head %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/footer.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/pop.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/post.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/button.css')}}">
+<link rel="icon" href="{{url_for('static',filename='images/blog.png')}}">
+<title>Pitches | Coding Journey</title>
+<style>
+    .active {
+        display: flex;
+    }
+</style>
+{% endblock %} {% block content %}
+
+<section class="header">
+    <article class="pop" id="pop">
+        <form class="pop-form" id='form' method='POST'>
+            {{ form.hidden_tag() }}
+            <div class="pop-form-title">
+                <div>
+                    <h1>Create Pitch</h1>
+                    <button id="close">&times;</button>
+                </div>
+            </div>
+            
