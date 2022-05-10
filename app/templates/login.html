@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <title>Pitches | Login</title>
+</head>
+
+<body>
+    <header class="header">
+        <section class="header-section">
+            <article>
+                {% for msg in get_flashed_messages() %}
+                <p class='created'>{{msg}}</p> {% endfor %}
+            </article>
+            <article class="header-section-title">
+                <h1>Login</h1>
+            </article>
+            <hr>
+            <form action="" class="header-section-form" method="POST">
+                {{ form.hidden_tag() }}
+                <div>
+                    {{ form.email }}
+                </div>
+                <div>
+                    {{form.password}}
+                </div>
+                <div class="header-section-form-button">
+                    {{ form.submit }}
+                </div>
+                <div class="header-section-form-already">
+                    <p>Don't have an account? <a href="{{url_for('users.register')}}">Sign up</a></p>
+                </div>
+            </form>
+        </section>
+    </header>
+</body>
+
+</html>
