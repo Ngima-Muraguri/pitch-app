@@ -45,3 +45,24 @@ def login():
             login_user(user)
             return redirect(url_for('main.home'))
     return render_template('login.html', form=form)
+
+@auths.route('/account', methods=['GET','POST'])
+@login_required
+def account():
+    form = Update()
+    if form.validate_on_submit():
+        if form.picture.data:
+            picture_file = save_picture(form.picture.data)
+            current_user.image_file = picture_file
+        current_user.username = form.username.data
+        current_user.email = form.email.data
+        db.session.commit()
+        return redirect(url_for('users.account'))
+    image_file = url_for('static',filename=f'images/{current_user.image_file}')
+    return render_template('account.html', image=image_file, form=form)
+
+#route logout
+@auths.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('users.login'))
