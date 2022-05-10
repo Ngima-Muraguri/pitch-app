@@ -16,3 +16,32 @@
                     <h2>{{ current_user.email }}</h2>
                 </div>
             </div>
+
+            <article class="header-profile-update">
+                <h1>Account Info</h1>
+                <form action="" class="header-profile-update-form" method='post' enctype="multipart/form-data">
+                    {{ form.hidden_tag() }} {{ form.username.title }}
+                    <div>
+                        {{ form.username }}
+                    </div>
+                    {{ form.email.title }}
+                    <div>
+                        {{ form.email }}
+                    </div>
+                    {{ form.picture.title }}
+                    <div>
+                        {{ form.picture }} {% if form.picture.errors %} {% for error in form.picture.errors %}
+                        <p>{{ error }}</p>
+                        {% endfor %} {% endif %}
+                    </div>
+                    <div class="header-profile-update-form-button">
+                        {{ form.submit }}
+                    </div>
+                </form>
+            </article>
+        </article>
+
+    </section>
+</header>
+<script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+{% endblock %}
