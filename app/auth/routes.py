@@ -24,3 +24,24 @@ def register():
         return redirect(url_for('users.login'))
     
     #Checks if form has errors
+
+    if form.errors != {}:
+        for err_msg in form.errors.values():
+            flash(f"{err_msg}")
+    #Renders the register page 
+    
+    return render_template('register.html', form=form)
+
+#Login route
+
+@auths.route('/login', methods=['GET','POST'])
+def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+    form  = Login()
+    if form.validate_on_submit():
+        user = User.query.filter_by(email=form.email.data).first()
+        if user and bcrypt.check_password_hash(user.password, form.password.data):
+            login_user(user)
+            return redirect(url_for('main.home'))
+    return render_template('login.html', form=form)
