@@ -1,0 +1,27 @@
+.footer {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid hsla(0, 0%, 0%, 0.1);
+}
+
+.footer-addons {
+    display: flex;
+    align-items: center;
+}
+
+.footer-addons p:not(:last-child) {
+    padding-right: 1rem;
+}
+
+@media (min-width:500px) {
+    .footer {
+        flex-direction: row;
+    }
+}
