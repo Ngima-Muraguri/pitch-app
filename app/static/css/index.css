@@ -86,3 +86,77 @@ body {
     background-color: black;
     border-radius: 10px;
 }
+@media (max-width:700px) {
+    .toggle-button {
+        display: flex;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .nav-links li {
+        padding: .2rem 0;
+    }
+    .nav-links li a {
+        padding: .5rem .2rem;
+    }
+}
+
+.login {
+    background-color: #19CB98;
+    border-radius: .2rem;
+    padding: .5rem 1rem;
+    color: white !important;
+}
+
+.login:hover {
+    background-color: hsl(163, 78%, 35%);
+    border-radius: .2rem;
+    padding: .5rem 1rem;
+    color: white !important;
+}
+
+.main {
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
+.main-company {
+    background-color: #754FFE;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-company-title {
+    margin-top: 3rem;
+    text-align: center;
+    color: white;
+}
+
+.main-company-title h1 {
+    font-size: 4.5rem;
+}
+
+.main-company-title p {
+    padding: .2rem 0;
+    font-weight: 500;
+}
+
+.login-prompt {
+    margin-block: .5rem;
+    background-color: #f8d7da;
+    color: #842029;
+    font-size: .9rem;
+    padding: .5rem;
+    border-radius: .2rem;
+}
