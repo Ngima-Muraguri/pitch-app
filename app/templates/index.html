@@ -1,0 +1,97 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+{%block styles%}
+{{super()}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+{%endblock%}
+{% block content%}
+<style>
+    .imp {
+        background-color: #f7f7e7ea;
+    }
+    #hr1 {
+        border-top: 2px solid black !important;
+    }
+    hr {
+        border-top: 0px solid #E0DFDF !important;
+        padding: 0;
+        margin-top: 0.5em !important;
+        border-width: 6px !important;
+        width: 100%;
+    }
+</style>
+<div class="container">
+    <div>
+        <h2 style="text-align:center;font-family: 'Open Sans', sans-serif;font-size:30px;font-weight: 900;color:rgb(191, 255, 71)">
+            {{title}}</h2>
+        <hr id="hr1">
+        <p style="text-align:center;font-family: 'Open Sans', sans-serif;font-size:20px">Welcome to the pitches Thrills,
+            you have less than a minute to write your new pitch to
+            impress users, users will have to vote your pitch and also leaving comments.</p>
+    </div> <br>
+    <div>
+        <a href="{{url_for('main.new_pitch')}}" class="btn btn-info btn-center -center"
+            style="  margin-top: 2rem;position: absolute;top: 35%;left: 50%;-ms-transform: translate(-50%, -50%);transform: translate(-50%, -50%);font-family: 'Open Sans', sans-serif;">
+            Add new Pitch</a>
+    </div>
+</div>
+<div class="container">
+    <h4
+        style="text-align:center;color:rgb(191, 255, 71);padding-top:5%;padding-bottom:3%;font-family: 'Open Sans', sans-serif;font-weight:900;">
+        Categories of Pitches</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card ">
+                <div class="well well-lg p-2 imp" style="text-align: center;">
+                    <h3 style="font-family: 'Open Sans', sans-serif;color:#c2972c;">Sport Pitches</h3>
+                    <hr>
+                    <p style="font-family: 'Open Sans', sans-serif;font-size:18px;font-style: italic;"> Sport pertains to any form of competitive physical activity or game that aims to use, maintain or improve physical ability and skills while providing enjoyment to participants and, in some cases, entertainment to spectators. Sports can, through casual or organized participation, improve one's physical health
+                       
+                    </p>
+                    <a href="{{url_for('main.sports')}}" class="btn btn-info btn-center -center">
+                        check Pitch</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card ">
+                <div class="well well-lg p-2 imp" style="text-align: center;">
+                    <h3 style="font-family: 'Open Sans', sans-serif;color:#c2972c;">Business Pitches</h3>
+                    <hr>
+                    <p style="font-family: 'Open Sans', sans-serif;font-size:18px;font-style: italic;">
+                        The term business refers to an organization or enterprising entity engaged in commercial, industrial, or professional activities. Businesses can be for-profit entities or they can be non-profit organizations that operate to fulfill a charitable mission or further a social cause. Businesses range in scale from sole proprietorships to international corporations and can range in size from small
+                        </p>
+                    <a href="{{url_for('main.business')}}" class="btn btn-info btn-center -center">
+                        check Pitch</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="card ">
+                <div class="well well-lg p-2 imp" style="text-align: center;">
+                    <h3 style="font-family: 'Open Sans', sans-serif;color: yellowgreen">Politics Pitches</h3>
+                    <hr>
+                    <p style="font-family: 'Open Sans', sans-serif;font-size:18px;font-style: italic;">1a : of or relating to government, a government, or the conduct of government. b : of, relating to, or concerned with the making as distinguished from the administration of governmental policy. 2 : of, relating to, involving, or involved in politics and especially party politics
+                       </p>
+                    <a href="{{url_for('main.politics')}}" class="btn btn-info btn-center -center">
+                        check Pitch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <footer class="page-footer">
+        <div class="" style="background-color: #133236; color:white; font-size:12pt; padding: 1%;">
+            <div class="footer-copyright text-center py-3">&#169;Copyright 2022: Milcah Muraguri
+            </div>
+        </div>
+    </footer>
+</div>
+{% endblock %}
+white_check_mark
+eyes
+raised_hands
