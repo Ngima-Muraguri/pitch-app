@@ -10,7 +10,9 @@
 
 ### Description
 Imagine you had only one minute to market yourself or give a great pitch in any field. <br>
-This is a flask news app that allows a user to create an account and add their short pitches in different categories
+This is a flask news app that allows a user to create an account and add their short pitches in different categories<br>
+
+![Landing page photo](https://github.com/Ngima-Muraguri/pitch-app/blob/master/app/static/photos/pitches.png)
 
 ### BDD
 A user should be able to create an account <br>
