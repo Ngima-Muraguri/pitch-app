@@ -9,7 +9,7 @@
 5. Licence
 
 ### Description
-Imagine you had only one minute to market yourself or give a great pitch in any field.
+Imagine you had only one minute to market yourself or give a great pitch in any field. <br>
 This is a flask news app that allows a user to create an account and add their short pitches in different categories
 
 ### BDD
