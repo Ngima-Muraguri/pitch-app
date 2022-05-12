@@ -1,35 +1,35 @@
-### PITCHES-APP
-# By Milcah Muraguri
+# PITCHES-APP
+## By Milcah Muraguri
 
-## Table of contents
+### Table of contents
 1. Description
 2. BDD
 3. Set up
 4. Technologies used
 5. Licence
 
-## Description
+### Description
 Imagine you had only one minute to market yourself or give a great pitch in any field.
 This is a flask news app that allows a user to create an account and add their short pitches in different categories
 
-## BDD
+### BDD
 A user should be able to create an account <br>
 A user can access their profile<br>
 A user can choose the category of pitch they want <br>
 A user should be able to add a pitch
 
-## Pre-requisites
+### Pre-requisites
 python3 <br>
 internet access <br>
 A laptop
 
-## Set up
+### Set up
 clone the repository <br>
 create a virtual environment and activate it<br>
 navigate to project <br>
 run the app. using python3 manage.py server
 
-## Technologies used
+### Technologies used
 python (flask) <br>
 html <br>
 css <br>
